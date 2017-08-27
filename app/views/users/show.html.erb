@@ -10,7 +10,7 @@ list<br>
 
 <% @users_list["data"].each do |user_list| %>
 	<% if (user_list.has_key?("images")) %>
-		<img src=<%= user_list["images"]["thumbnail"]["url"]%> >
+		<%= link_to image_tag(user_list["images"]["thumbnail"]["url"]),user_list["link"] %>
 	<% end%>
 <% end %>
 
