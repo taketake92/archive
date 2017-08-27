@@ -3,15 +3,17 @@ myprofile<br>
 <%= @user["data"]["username"]%>
 <%= @user["data"]["full_name"]%>
 <%= @user["data"]["bio"]%>
+<%= @user["data"]["counts"]["followed_by"]%>
+<%= @user["data"]["counts"]["follows"]%>
 
 <br>
 <br>
 list<br>
-<%= b=0 %>
-<% @users_list.each do |user_list| %>
-		
-	
-	<%= b=b+1 %>
+
+<% @users_list["data"].each do |user_list| %>
+	<% if (user_list.has_key?("images")) %>
+		<%= link_to image_tag(user_list["images"]["thumbnail"]["url"]),user_list["link"] %>
+	<% end%>
 <% end %>
 
 
