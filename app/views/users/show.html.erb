@@ -7,11 +7,11 @@ myprofile<br>
 <br>
 <br>
 list<br>
-<%= b=0 %>
-<% @users_list.each do |user_list| %>
-		
-	
-	<%= b=b+1 %>
+
+<% @users_list["data"].each do |user_list| %>
+	<% if (user_list.has_key?("images")) %>
+		<img src=<%= user_list["images"]["thumbnail"]["url"]%> >
+	<% end%>
 <% end %>
 
 
