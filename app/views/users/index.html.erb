@@ -1,19 +1,16 @@
-myprofile<br>
-<img src=<%= @user["data"]["profile_picture"]%> %>
-<%= @user["data"]["username"]%>
-<%= @user["data"]["full_name"]%>
-<%= @user["data"]["bio"]%>
-<%= @user["data"]["counts"]["followed_by"]%>
-<%= @user["data"]["counts"]["follows"]%>
-
-<br>
-<br>
-list<br>
-
-<% @users_list["data"].each do |user_list| %>
-	<% if (user_list.has_key?("images")) %>
-		<%= link_to image_tag(user_list["images"]["thumbnail"]["url"]),user_list["link"] %>
-	<% end%>
+<% @couponlists.each do |coupon_list| %>
+		<div class="section">
+			<h3><%= link_to coupon_list["coupon_shop"], coupon_list["coupon_site_url"] %></h3>
+			<div class="innerBorder">
+				<div class="couponjpg">
+					<%= image_tag(coupon_list["coupon_site_url"], )%>
+				</div>
+			</div>
+		</div>
 <% end %>
+<%= paginate @couponlists %>
 
+<%= link_to 'ユーザー登録', new_user_path, class: "btn btn-primary" %>
 
+	
+	

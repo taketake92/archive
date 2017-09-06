@@ -4,9 +4,7 @@ class UsersController < ApplicationController
 	
 	def index
 		
-		user_accesstoken = User.find(1).insta_access_token_id
-		@user = myprofile(user_accesstoken)
-		@users_list = mylist(user_accesstoken)
+		@couponlists = CouponListMaster.all.page(params[:page]).per(3)
 		
 	end
 	
@@ -53,14 +51,14 @@ class UsersController < ApplicationController
 		# @user = User.find(params[:id])
 		# @user = User.find(1)
 		
-		user_accesstoken = User.find(1).insta_access_token_id
-		@user = myprofile(user_accesstoken)
-		@users_list = mylist(user_accesstoken)
+		# user_accesstoken = User.find(1).insta_access_token_id
+		# @user = myprofile(user_accesstoken)
+		# @users_list = mylist(user_accesstoken)
 	end
 
 	#strong parameter
 	def user_params
-		params.require(:user).permit(:client_id, :insta_access_token_id)
+		# params.require(:user).permit(:client_id, :insta_access_token_id)
 	end
 
 end
