@@ -1,8 +1,8 @@
 require 'test_helper'
 
 class SessionsControllerTest < ActionDispatch::IntegrationTest
-  test "should get only" do
-    get sessions_only_url
+  test "should get new" do
+    get sessions_new_url
     assert_response :success
   end
 
@@ -11,8 +11,8 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get destory" do
-    get sessions_destory_url
+  test "should get destroy" do
+    get sessions_destroy_url
     assert_response :success
   end
 
