@@ -1,23 +1,23 @@
 require 'test_helper'
 
-class LoginusersControllerTest < ActionDispatch::IntegrationTest
+class LoginUsersControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get loginusers_index_url
+    get login_users_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get loginusers_show_url
+    get login_users_show_url
     assert_response :success
   end
 
   test "should get new" do
-    get loginusers_new_url
+    get login_users_new_url
     assert_response :success
   end
 
   test "should get create" do
-    get loginusers_create_url
+    get login_users_create_url
     assert_response :success
   end
 
