@@ -1,22 +1,24 @@
 Rails.application.routes.draw do
 
-  get 'login_users/index'
+  get 'toppages/index'
 
-  get 'login_users/show'
+  # get 'login_users/index'
 
-  get 'login_users/new'
+  # get 'login_users/show'
 
-  get 'login_users/create'
+  # get 'login_users/new'
 
-  get 'loginusers/index'
+  # get 'login_users/create'
 
-  get 'loginusers/show'
+  # get 'loginusers/index'
 
-  get 'loginusers/new'
+  # get 'loginusers/show'
 
-  get 'loginusers/create'
+  # get 'loginusers/new'
 
-  root to: 'users#index'
+  # get 'loginusers/create'
+
+  root to: 'toppages#index'
   resources :users
 
   # newアクションの場合にだけurlがsignupになる
